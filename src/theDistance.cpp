@@ -2,13 +2,14 @@
 #include "theDistance.h"
 #include <RunningMedian.h>
 
-const int trigPin = 9;
-const int echoPin = 10;
+// const int trigPin = 9;
+// const int echoPin = 10;
 int distance;
 long duration;
 
-int HCSR04measure() {
-  int val = 0;
+int HCSR04measure(int trigPin, int echoPin) {
+  // int val = 0;
+  
   RunningMedian twenty = RunningMedian(20);//array for twenty values created here
 
   for (int i = 0; i < 20; i++) {
